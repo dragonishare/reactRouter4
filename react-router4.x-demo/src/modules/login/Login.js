@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 export default class Login extends Component {
   constructor(props) {
@@ -33,6 +34,12 @@ export default class Login extends Component {
   }
 
   render() {
+    if (this.state.loggedIn && this.props.location.pathname === '/login') {
+      return (
+        <Redirect to='/home' />
+      )
+    }
+
     return (
       <div className='login-wrap'>
         <h2>登 录</h2>

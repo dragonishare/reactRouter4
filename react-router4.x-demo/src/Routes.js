@@ -15,16 +15,20 @@ import List from './modules/goods/List.js'
 import Brand from './modules/goods/Brand.js'
 
 const routes = [
-  { path: '/home',
+  {
+    path: '/home',
     component: Home
   },
-  { path: '/goods',
+  {
+    path: '/goods',
     component: Goods,
     children: [
-      { path: '/goods/list',
+      {
+        path: '/goods/list',
         component: List
       },
-      { path: '/goods/brand',
+      {
+        path: '/goods/brand',
         component: Brand
       }
     ]
