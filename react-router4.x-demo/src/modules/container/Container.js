@@ -19,7 +19,7 @@ class Container extends Component {
       )
     } else if (this.props.location.pathname === '/') {
       return (
-        <Redirect to='/home' />
+        <Redirect to='/goods' />
       )
     }
 

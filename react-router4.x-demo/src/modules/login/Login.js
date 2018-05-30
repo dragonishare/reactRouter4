@@ -29,14 +29,14 @@ export default class Login extends Component {
       localStorage.setItem('loggedIn', true)
       localStorage.setItem('username', this.state.username)
       this.setState({loggedIn: true})
-      this.props.history.push('/home')
+      // this.props.history.push('/goods')
     }
   }
 
   render() {
     if (this.state.loggedIn && this.props.location.pathname === '/login') {
       return (
-        <Redirect to='/home' />
+        <Redirect to='/goods' />
       )
     }
 
